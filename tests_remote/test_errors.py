@@ -1,9 +1,15 @@
-# /usr/bin/env python
+#!/usr/bin/env python
+import sys
 import urllib2
 import json
 from _test import *
+import time
 
-api = SimpleJsonRPCClient(SERVICE_ENDPOINT)
+endpoint = SERVICE_ENDPOINT
+if len(sys.argv) > 1:
+    endpoint = sys.argv[1]
+
+api = SimpleJsonRPCClient(endpoint)
 
 
 # HTTP GET call is invalid (in fact, ANYTHING but HTTP POST )
@@ -66,15 +72,15 @@ except urllib2.HTTPError, e:
 # service does not exists
 try:
     response = api.call('Dummy-Doesnot.Retrieve', Id=1)
-    assert False, 'Expecting an error, got %r' % response
+    assert False, 'Expecting an error'
 except SimpleJsonRPCClientError, e:
-    # assert '-32601' in repr(e), 'Unexpected error: %r' % e
+    #assert '-32601' in repr(e), 'Unexpected error: %r' % e
     print 'OK. It was an expected error %r' % e.code
 
 # incorrect parameter type
 try:
     response = api.call('System.Test', test=1)
-    assert False, 'Expecting an error, got %r' % response
+    assert False, 'Expecting an error'
 except SimpleJsonRPCClientError, e:
     assert e.code == 500, 'Unexpected error: %r' % e
     print 'OK. It was an expected error %r' % e.code
@@ -82,7 +88,7 @@ except SimpleJsonRPCClientError, e:
 # incorrect parameter name
 try:
     response = api.call('System.Test', test_this_param_does_not_exist=1)
-    assert False, 'Expecting an error, got %r' % response
+    assert False, 'Expecting an error'
 except SimpleJsonRPCClientError, e:
     assert e.code == 500, 'Unexpected error: %r' % e
     print 'OK. It was an expected error %r' % e.code
@@ -90,15 +96,15 @@ except SimpleJsonRPCClientError, e:
 # missing a required parameter
 try:
     response = api.call('System.Test')
-    assert False, 'Expecting an error, got %r' % response
+    assert False, 'Expecting an error'
 except SimpleJsonRPCClientError, e:
-    # assert 'InvalidParamsError' in repr(e), 'Unexpected error: %r' % e
+    #assert 'InvalidParamsError' in repr(e), 'Unexpected error: %r' % e
     print 'OK. It was an expected error %r' % e.code
 
 # programming error on the server side
 try:
     response = api.call('System.Test', Test="fatal")
-    assert False, 'Expecting an error, got %r' % response
+    assert False, 'Expecting an error'
 except SimpleJsonRPCClientError, e:
     assert e.code in (405, 500), 'Unexpected error: %r %r %r' % (e.code, e.reason, e.read())
     print 'OK. It was an expected error HTTP %r' % e.code

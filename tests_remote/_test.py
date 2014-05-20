@@ -2,7 +2,7 @@
 import urllib2
 import json
 
-SERVICE_ENDPOINT = 'http://localhost:8080/restaurant/0.1/'
+SERVICE_ENDPOINT = 'http://localhost:8081/restaurant/0.1/'
 
 
 class SimpleJsonRPCClientError(Exception):

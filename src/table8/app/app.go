@@ -83,6 +83,7 @@ func (h *System) Test(r *http.Request, args *struct{ Test string }, reply *struc
 		return &json2.Error{Code: json2.E_INVALID_REQ, Message: "Required parameter: Test"}
 	}
 	if args.Test == "fatal" {
+		// fatal, programming error
 		x := 0
 		y := 0
 		x = x / y
@@ -140,7 +141,7 @@ func (h *System) CreateTestData(r *http.Request, args *SystemArgs, reply *Genera
 		region1 := models.Region{Uid: "@test-san-francisco", Title: "TEST San Francisco"}
 		_, err = datastore.Put(c, datastore.NewKey(c, "Region", region1.Uid, 0, nil), &region1)
 		checkErr(err, "fail trying to insert")
-		region2 := models.Region{Uid: "@test-los-angeles", Title: "TEST Lost Angeles"}
+		region2 := models.Region{Uid: "@test-los-angeles", Title: "TEST Los Angeles"}
 		_, err = datastore.Put(c, datastore.NewKey(c, "Region", region2.Uid, 0, nil), &region2)
 		checkErr(err, "fail trying to insert")
 

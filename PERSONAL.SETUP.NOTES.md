@@ -8,7 +8,7 @@ Google Cloud SDK, to handle Appengine, Appengine GO SDK, Cloud SQL, Cloud Storag
 
 GORM as a db abstraction layer/orm... It has some minor things I dislike, but it seems pretty mature/well tested, and very well documented.
 	https://github.com/jinzhu/gorm
-	
+
 	GORP seems nice enough, but besides the same things I dislike on GORM, it forces you to rely exclusively on writing SQL and concatenated string for SELECT ... WHERE and similar stuff
 		https://github.com/coopernurse/gorp
 
