@@ -1,0 +1,10 @@
+application: t8-restapi-go
+runtime: go
+api_version: go1
+version: 1
+
+handlers:
+- url: /res
+  static_dir: res
+- url: /.*
+  script: _go_app 

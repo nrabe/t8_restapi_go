@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>restaurant_api - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../lib/godoc/jquery.treeview.css">
+<script type="text/javascript">window.initFuncs = [];</script>
+</head>
+<body>
+
+<div id="mainframe" style="position: fixed; bottom: 0; top:0; overflow: auto; width: 100%;">
+<div id="topbar" class="wide"><div class="container">
+
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+<a href="http://localhost:6060/doc/">Documents</a>
+<a href="http://localhost:6060/pkg/">Packages</a>
+<a href="http://localhost:6060/project/">The Project</a>
+<a href="http://localhost:6060/help/">Help</a>
+<a href="http://localhost:6060/blog/">Blog</a>
+
+<input type="text" id="search" name="q" class="inactive" value="Search" placeholder="Search">
+</div>
+<div id="heading"><a href="http://localhost:6060/">The Go Programming Language</a></div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <div id="plusone"><g:plusone size="small" annotation="none"></g:plusone></div>
+  <h1>Package restaurant_api</h1>
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+        document.ANALYSIS_DATA = null;
+        document.CALLGRAPH = null;
+        </script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "table8/restaurant_api"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#Register">func Register(rpc_v2 *rpc.Server)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Customer">type Customer</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Customer.Retrieve">func (h *Customer) Retrieve(r *http.Request, args *CustomerRetrieveArgs, reply *CustomerListReply) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#CustomerListReply">type CustomerListReply</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CustomerModel">type CustomerModel</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#CustomerRetrieveArgs">type CustomerRetrieveArgs</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Employee">type Employee</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Employee.Create">func (h *Employee) Create(r *http.Request, args *EmployeeCreateArgs, reply *EmployeeListReply) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Employee.Delete">func (h *Employee) Delete(r *http.Request, args *EmployeeDeleteArgs, reply *GeneralReply) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Employee.Retrieve">func (h *Employee) Retrieve(r *http.Request, args *EmployeeRetrieveArgs, reply *EmployeeListReply) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Employee.Update">func (h *Employee) Update(r *http.Request, args *EmployeeUpdateArgs, reply *EmployeeListReply) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#EmployeeCreateArgs">type EmployeeCreateArgs</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EmployeeDeleteArgs">type EmployeeDeleteArgs</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EmployeeListReply">type EmployeeListReply</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EmployeeModel">type EmployeeModel</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EmployeeRetrieveArgs">type EmployeeRetrieveArgs</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EmployeeUpdateArgs">type EmployeeUpdateArgs</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#GeneralArgs">type GeneralArgs</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#GeneralReply">type GeneralReply</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Reservation">type Reservation</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Reservation.Cancel">func (h *Reservation) Cancel(r *http.Request, args *ReservationCancelArgs, reply *GeneralReply) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Reservation.Create">func (h *Reservation) Create(r *http.Request, args *ReservationCreateUpdateArgs, reply *ReservationListReply) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Reservation.Retrieve">func (h *Reservation) Retrieve(r *http.Request, args *ReservationRetrieveArgs, reply *ReservationListReply) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Reservation.Update">func (h *Reservation) Update(r *http.Request, args *ReservationCreateUpdateArgs, reply *ReservationListReply) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#ReservationCancelArgs">type ReservationCancelArgs</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ReservationCreateUpdateArgs">type ReservationCreateUpdateArgs</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ReservationListReply">type ReservationListReply</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ReservationModel">type ReservationModel</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#ReservationRetrieveArgs">type ReservationRetrieveArgs</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RestaurantDetail">type RestaurantDetail</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RestaurantDetail.Get">func (h *RestaurantDetail) Get(r *http.Request, args *GeneralArgs, reply *RestaurantDetailReply) error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RestaurantDetail.Update">func (h *RestaurantDetail) Update(r *http.Request, args *RestaurantDetailUpdateArgs, reply *RestaurantDetailReply) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#RestaurantDetailReply">type RestaurantDetailReply</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RestaurantDetailUpdateArgs">type RestaurantDetailUpdateArgs</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RestaurantModel">type RestaurantModel</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#RestaurantTag">type RestaurantTag</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#RestaurantTag.Retrieve">func (h *RestaurantTag) Retrieve(r *http.Request, args *GeneralArgs, reply *RestaurantTagListReply) error</a></dd>
+				
+			
+				
+				<dd><a href="index.html#RestaurantTagListReply">type RestaurantTagListReply</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#System">type System</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#System.Test">func (h *System) Test(r *http.Request, args *struct{Test string}, reply *struct{}) error</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/pkg/table8/restaurant_api/models.go">models.go</a>
+			
+				<a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go">restaurant_api.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+                        <p>
+                          In the call graph viewer below, each node
+                          is a function belonging to this package
+                          and its children are the functions it
+                          calls&mdash;perhaps dynamically.
+                        </p>
+                        <p>
+                          The root nodes are the entry points of the
+                          package: functions that may be called from
+                          outside the package.  
+                          There may be non-exported or anonymous
+                          functions among them if they are called
+                          dynamically from another package.
+                        </p>
+                        <p>
+                          Click a node to visit that function's source code.
+                          From there you can visit its callers by
+                          clicking its declaring <code>func</code>
+                          token.
+                        </p>
+                        <p>
+                          Functions may be omitted if they were
+                          determined to be unreachable in the
+                          particular programs or tests that were
+                          analyzed.
+                        </p>
+                        <!-- Zero means show all package entry points. -->
+                        <ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+                        </script>                        
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+		
+		
+			
+			
+			<h2 id="Register">func <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=152:185#L3">Register</a></h2>
+			<pre>func Register(rpc_v2 *rpc.<a href="index.html#Server">Server</a>)</pre>
+			
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Customer">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=4244:4266#L167">Customer</a></h2>
+			<pre>type Customer struct{}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Customer.Retrieve">func (*Customer) <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=4268:4372#L169">Retrieve</a></h3>
+				<pre>func (h *<a href="index.html#Customer">Customer</a>) Retrieve(r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>, args *<a href="index.html#CustomerRetrieveArgs">CustomerRetrieveArgs</a>, reply *<a href="index.html#CustomerListReply">CustomerListReply</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+			        
+			
+		
+			
+			
+			<h2 id="CustomerListReply">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=4171:4242#L162">CustomerListReply</a></h2>
+			<pre>type CustomerListReply struct {
+    Count   <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+    Results []<a href="index.html#EmployeeModel">EmployeeModel</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CustomerModel">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/models.go?s=353:454#L17">CustomerModel</a></h2>
+			<pre>type CustomerModel struct {
+    FirstName <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    LastName  <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    Email     <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    Phone     <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="CustomerRetrieveArgs">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=4091:4169#L156">CustomerRetrieveArgs</a></h2>
+			<pre>type CustomerRetrieveArgs struct {
+    Id     <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    Search <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    Page   <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Employee">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=3365:3387#L131">Employee</a></h2>
+			<pre>type Employee struct{}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Employee.Create">func (*Employee) <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=3528:3628#L138">Create</a></h3>
+				<pre>func (h *<a href="index.html#Employee">Employee</a>) Create(r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>, args *<a href="index.html#EmployeeCreateArgs">EmployeeCreateArgs</a>, reply *<a href="index.html#EmployeeListReply">EmployeeListReply</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+			        
+			
+				
+				<h3 id="Employee.Delete">func (*Employee) <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=3871:3966#L149">Delete</a></h3>
+				<pre>func (h *<a href="index.html#Employee">Employee</a>) Delete(r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>, args *<a href="index.html#EmployeeDeleteArgs">EmployeeDeleteArgs</a>, reply *<a href="index.html#GeneralReply">GeneralReply</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+			        
+			
+				
+				<h3 id="Employee.Retrieve">func (*Employee) <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=3389:3493#L133">Retrieve</a></h3>
+				<pre>func (h *<a href="index.html#Employee">Employee</a>) Retrieve(r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>, args *<a href="index.html#EmployeeRetrieveArgs">EmployeeRetrieveArgs</a>, reply *<a href="index.html#EmployeeListReply">EmployeeListReply</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+			        
+			
+				
+				<h3 id="Employee.Update">func (*Employee) <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=3646:3746#L142">Update</a></h3>
+				<pre>func (h *<a href="index.html#Employee">Employee</a>) Update(r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>, args *<a href="index.html#EmployeeUpdateArgs">EmployeeUpdateArgs</a>, reply *<a href="index.html#EmployeeListReply">EmployeeListReply</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+			        
+			
+		
+			
+			
+			<h2 id="EmployeeCreateArgs">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=3132:3181#L113">EmployeeCreateArgs</a></h2>
+			<pre>type EmployeeCreateArgs struct {
+    <a href="index.html#EmployeeModel">EmployeeModel</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EmployeeDeleteArgs">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=3245:3290#L122">EmployeeDeleteArgs</a></h2>
+			<pre>type EmployeeDeleteArgs struct {
+    Id <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EmployeeListReply">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=3292:3363#L126">EmployeeListReply</a></h2>
+			<pre>type EmployeeListReply struct {
+    Count   <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+    Results []<a href="index.html#EmployeeModel">EmployeeModel</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EmployeeModel">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/models.go?s=109:238#L1">EmployeeModel</a></h2>
+			<pre>type EmployeeModel struct {
+    FirstName   <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    LastName    <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    Email       <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    Password    <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    AccessLevel <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EmployeeRetrieveArgs">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=3052:3130#L107">EmployeeRetrieveArgs</a></h2>
+			<pre>type EmployeeRetrieveArgs struct {
+    Id     <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    Search <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    Page   <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EmployeeUpdateArgs">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=3183:3243#L117">EmployeeUpdateArgs</a></h2>
+			<pre>type EmployeeUpdateArgs struct {
+    Id <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    <a href="index.html#EmployeeModel">EmployeeModel</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="GeneralArgs">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=2240:2267#L72">GeneralArgs</a></h2>
+			<pre>type GeneralArgs struct {
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="GeneralReply">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=2269:2336#L75">GeneralReply</a></h2>
+			<pre>type GeneralReply struct {
+    Warnings []<a href="http://localhost:6060/pkg/builtin/#string">string</a> `json:&#34;,omitempty&#34;`
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Reservation">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=4696:4721#L194">Reservation</a></h2>
+			<pre>type Reservation struct{}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="Reservation.Cancel">func (*Reservation) <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=5691:5792#L239">Cancel</a></h3>
+				<pre>func (h *<a href="index.html#Reservation">Reservation</a>) Cancel(r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>, args *<a href="index.html#ReservationCancelArgs">ReservationCancelArgs</a>, reply *<a href="index.html#GeneralReply">GeneralReply</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+Cancel a reservation
+</p>
+<p>
+Errors:
+- Required value XXX
+- Cannot unmarshal XXX
+- Table XXX does not exists
+- Customer XXX does not exists
+- Permission required
+</p>
+
+				
+				
+			        
+			
+				
+				<h3 id="Reservation.Create">func (*Reservation) <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=5102:5217#L211">Create</a></h3>
+				<pre>func (h *<a href="index.html#Reservation">Reservation</a>) Create(r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>, args *<a href="index.html#ReservationCreateUpdateArgs">ReservationCreateUpdateArgs</a>, reply *<a href="index.html#ReservationListReply">ReservationListReply</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+Creates a reservation, optionally tied to a physical table, optionally tied to a customer.
+</p>
+<p>
+Errors:
+- Required value XXX
+- Cannot unmarshal XXX
+- Table XXX does not exists
+- Customer XXX does not exists
+- Permission required
+</p>
+
+				
+				
+			        
+			
+				
+				<h3 id="Reservation.Retrieve">func (*Reservation) <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=4723:4836#L196">Retrieve</a></h3>
+				<pre>func (h *<a href="index.html#Reservation">Reservation</a>) Retrieve(r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>, args *<a href="index.html#ReservationRetrieveArgs">ReservationRetrieveArgs</a>, reply *<a href="index.html#ReservationListReply">ReservationListReply</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+			        
+			
+				
+				<h3 id="Reservation.Update">func (*Reservation) <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=5397:5512#L225">Update</a></h3>
+				<pre>func (h *<a href="index.html#Reservation">Reservation</a>) Update(r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>, args *<a href="index.html#ReservationCreateUpdateArgs">ReservationCreateUpdateArgs</a>, reply *<a href="index.html#ReservationListReply">ReservationListReply</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+Changes a reservation
+</p>
+<p>
+Errors:
+- Required value XXX
+- Cannot unmarshal XXX
+- Table XXX does not exists
+- Customer XXX does not exists
+- Permission required
+</p>
+
+				
+				
+			        
+			
+		
+			
+			
+			<h2 id="ReservationCancelArgs">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=4553:4601#L184">ReservationCancelArgs</a></h2>
+			<pre>type ReservationCancelArgs struct {
+    Id <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ReservationCreateUpdateArgs">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=4490:4551#L180">ReservationCreateUpdateArgs</a></h2>
+			<pre>type ReservationCreateUpdateArgs struct {
+    <a href="index.html#ReservationModel">ReservationModel</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ReservationListReply">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=4603:4694#L188">ReservationListReply</a></h2>
+			<pre>type ReservationListReply struct {
+    <a href="index.html#GeneralReply">GeneralReply</a>
+    Count   <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+    Results []<a href="index.html#ReservationModel">ReservationModel</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ReservationModel">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/models.go?s=456:680#L24">ReservationModel</a></h2>
+			<pre>type ReservationModel struct {
+    DateTime        <a href="http://localhost:6060/pkg/time/">time</a>.<a href="http://localhost:6060/pkg/time/#Time">Time</a>
+    Tops            <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+    CustomerId      <a href="http://localhost:6060/pkg/builtin/#string">string</a>        `api:&#34;optional&#34;`
+    Customer        <a href="index.html#CustomerModel">CustomerModel</a> `api:&#34;optional&#34;`
+    AssignedTableId <a href="http://localhost:6060/pkg/builtin/#string">string</a>        `api:&#34;optional&#34;`
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="ReservationRetrieveArgs">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=4407:4488#L174">ReservationRetrieveArgs</a></h2>
+			<pre>type ReservationRetrieveArgs struct {
+    Id     <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    Search <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    Page   <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RestaurantDetail">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=2431:2461#L83">RestaurantDetail</a></h2>
+			<pre>type RestaurantDetail struct{}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="RestaurantDetail.Get">func (*RestaurantDetail) <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=2463:2565#L85">Get</a></h3>
+				<pre>func (h *<a href="index.html#RestaurantDetail">RestaurantDetail</a>) Get(r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>, args *<a href="index.html#GeneralArgs">GeneralArgs</a>, reply *<a href="index.html#RestaurantDetailReply">RestaurantDetailReply</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+			        
+			
+				
+				<h3 id="RestaurantDetail.Update">func (*RestaurantDetail) <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=2583:2703#L89">Update</a></h3>
+				<pre>func (h *<a href="index.html#RestaurantDetail">RestaurantDetail</a>) Update(r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>, args *<a href="index.html#RestaurantDetailUpdateArgs">RestaurantDetailUpdateArgs</a>, reply *<a href="index.html#RestaurantDetailReply">RestaurantDetailReply</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+			        
+			
+		
+			
+			
+			<h2 id="RestaurantDetailReply">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=2387:2429#L81">RestaurantDetailReply</a></h2>
+			<pre>type RestaurantDetailReply <a href="index.html#RestaurantModel">RestaurantModel</a></pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RestaurantDetailUpdateArgs">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=2338:2385#L79">RestaurantDetailUpdateArgs</a></h2>
+			<pre>type RestaurantDetailUpdateArgs <a href="index.html#RestaurantModel">RestaurantModel</a></pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RestaurantModel">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/models.go?s=240:351#L9">RestaurantModel</a></h2>
+			<pre>type RestaurantModel struct {
+    Title   <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    Tagline <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    Details <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    Website <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+    Phone   <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="RestaurantTag">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=2721:2762#L93">RestaurantTag</a></h2>
+			<pre>type RestaurantTag struct {
+    Tag <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="RestaurantTag.Retrieve">func (*RestaurantTag) <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=2842:2947#L102">Retrieve</a></h3>
+				<pre>func (h *<a href="index.html#RestaurantTag">RestaurantTag</a>) Retrieve(r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>, args *<a href="index.html#GeneralArgs">GeneralArgs</a>, reply *<a href="index.html#RestaurantTagListReply">RestaurantTagListReply</a>) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				
+				
+				
+			        
+			
+		
+			
+			
+			<h2 id="RestaurantTagListReply">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=2764:2840#L97">RestaurantTagListReply</a></h2>
+			<pre>type RestaurantTagListReply struct {
+    Count   <a href="http://localhost:6060/pkg/builtin/#int">int</a>
+    Results []<a href="index.html#RestaurantTag">RestaurantTag</a>
+}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="System">type <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=1834:1854#L54">System</a></h2>
+			<pre>type System struct{}</pre>
+			
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="System.Test">func (*System) <a href="http://localhost:6060/src/pkg/table8/restaurant_api/restaurant_api.go?s=1961:2051#L60">Test</a></h3>
+				<pre>func (h *<a href="index.html#System">System</a>) Test(r *<a href="http://localhost:6060/pkg/net/http/">http</a>.<a href="http://localhost:6060/pkg/net/http/#Request">Request</a>, args *struct{ Test <a href="http://localhost:6060/pkg/builtin/#string">string</a> }, reply *struct{}) <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>
+INTERNAL: Some general system tests, checking/showing how errors and other conditions are handled
+</p>
+
+				
+				
+			        
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.2.1 (appengine-1.9.4).<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="http://localhost:6060/doc/tos.html">Terms of Service</a> | 
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+</div><!-- #mainframe -->
+<div id='lowframe' style="position: absolute; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<!-- TODO(adonovan): load these from <head> using "defer" attribute? -->
+<script type="text/javascript" src="../../../lib/godoc/jquery.js"></script>
+<script type="text/javascript" src="../../../lib/godoc/jquery.treeview.js"></script>
+<script type="text/javascript" src="../../../lib/godoc/jquery.treeview.edit.js"></script>
+
+
+<script type="text/javascript" src="../../../lib/godoc/godocs.js"></script>
+
+</body>
+</html>
+
